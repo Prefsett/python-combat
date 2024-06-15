@@ -1,11 +1,14 @@
-const elem = document.getElementById("clicked");
-const elem2 = document.getElementById("result");
-let counter = 0;
+import { Counter } from "./localStorage.js";
 
-const render = () => (elem2.innerHTML = `Click: ${counter}`);
+const clickedElement = document.getElementById("clicked");
+const counterElement = document.getElementById("result");
+
+let counter = Counter.get();
+
+const render = () => (counterElement.innerHTML = `Click: ${counter}`);
 render();
 
-elem.addEventListener("click", (evt) => {
-  ++counter;
+clickedElement.addEventListener("click", (evt) => {
+  Counter.set(++counter);
   render();
 });
