@@ -11,5 +11,28 @@
       <h1 id="result"></h1>
     </div>
   </body>
-  <script type="module" src="./src/main.js"></script>
+  <script>
+    class Counter {
+      static set(counter) {
+        localStorage.setItem("counter", counter);
+      }
+
+      static get() {
+        return localStorage.getItem("counter") || 0;
+      }
+    }
+
+    const clickedElement = document.getElementById("clicked");
+    const counterElement = document.getElementById("result");
+
+    let counter = Counter.get();
+
+    const render = () => (counterElement.innerHTML = `Click: ${counter}`);
+    render();
+
+    clickedElement.addEventListener("click", (evt) => {
+      Counter.set(++counter);
+      render();
+    });
+  </script>
 </html>
