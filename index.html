@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python combat</title>
+  </head>
+  <body>
+    <div>
+      <img src="./public/python.png" id="clicked" />
+      <h1 id="result"></h1>
+    </div>
+  </body>
+  <script>
+    const elem = document.getElementById("clicked");
+    const elem2 = document.getElementById("result");
+    let counter = 0;
+
+    const render = () => (elem2.innerHTML = `Click: ${counter}`);
+    render();
+
+    elem.addEventListener("click", (evt) => {
+      ++counter;
+      render();
+    });
+  </script>
+</html>
