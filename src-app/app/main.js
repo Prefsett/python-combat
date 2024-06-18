@@ -9,7 +9,10 @@ export class App {
 
     this.#render();
 
-    clickedElement.addEventListener('touchend', App.#click);
+    clickedElement.addEventListener('touchend', (event) => {
+      event.preventDefault();
+      App.#click;
+    });
   }
 
   static #render() {
