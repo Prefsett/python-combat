@@ -1,18 +1,26 @@
-import { Counter } from "./localstorage/counter.js";
+import { Counter } from './localstorage/counter.js';
 
 export class App {
+  static #counter = Counter.get();
+  static #incrNum = 1;
+
   static start() {
-    const clickedElement = document.getElementById("clicked");
-    const counterElement = document.getElementById("result");
+    const clickedElement = document.getElementById('clicked');
 
-    let counter = Counter.get();
+    this.#render();
 
-    const render = () => (counterElement.innerHTML = `${counter}`);
-    render();
+    clickedElement.addEventListener('click', App.#click);
+    clickedElement.addEventListener('touchstart', App.#click);
+  }
 
-    clickedElement.addEventListener("click", (evt) => {
-      Counter.set(++counter);
-      render();
-    });
+  static #render() {
+    const counterElement = document.getElementById('result');
+    counterElement.innerHTML = `${App.#counter}`;
+  }
+
+  static #click(evt) {
+    App.#counter += App.#incrNum;
+    Counter.set(App.#counter);
+    App.#render();
   }
 }

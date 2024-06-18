@@ -15,7 +15,7 @@
   > .result-container__result {
     display: flex;
 
-    margin: auto auto auto - 4px;
+    margin: auto;
 
     font-size: 32px;
   }
