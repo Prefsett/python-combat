@@ -1,0 +1,9 @@
+.python {
+  --blue: #387eb8;
+  --yellow: #ffe052;
+
+  /* --blue: #366994; */
+  /* --yellow: #FFC331; */
+
+  filter: drop-shadow(0 4px 8px 0 var(--blue), 0 6px 20px 0 var(--yellow));
+}

@@ -3,16 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python combat</title>
-    <link rel="stylesheet" href="src/index.css" />
+    <link
+      rel="shortcut icon"
+      href="./public/python_icon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="src-app/styles.css" />
+    <title>Python Combat</title>
   </head>
   <body>
     <main class="main">
       <div class="main__inner">
-        <img src="./public/python.png" id="clicked" class="clicked" />
-        <h1 id="result" class="result"></h1>
+        <img
+          src="./public/python_icon.svg"
+          id="clicked"
+          class="clicked python"
+        />
+        <div class="result-container">
+          <img
+            src="./public/python_icon.svg"
+            class="result-container__coin-logo"
+          />
+          <h1 id="result" class="result-container__result"></h1>
+        </div>
       </div>
     </main>
   </body>
-  <script type="module" src="./src/index.js"></script>
+  <script type="module" src="./src-app/app.js"></script>
 </html>

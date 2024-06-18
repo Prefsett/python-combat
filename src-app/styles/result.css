@@ -1,0 +1,22 @@
+.result-container {
+  display: flex;
+
+  margin: 0 auto 0 auto;
+
+  > .result-container__coin-logo {
+    display: flex;
+
+    width: calc(800px / 16);
+    height: calc(800px / 16);
+
+    margin: auto;
+  }
+
+  > .result-container__result {
+    display: flex;
+
+    margin: auto auto auto - 4px;
+
+    font-size: 32px;
+  }
+}

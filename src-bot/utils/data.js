@@ -1,10 +1,10 @@
-const fs = require("fs");
+const fs = require('fs');
 
 class Data {
   constructor(path) {
     this.data;
     this.__path__ = path;
-    this.__encoding__ = "utf-8";
+    this.__encoding__ = 'utf-8';
 
     this.getData();
   }
@@ -44,7 +44,7 @@ class Data {
         (err) => {
           if (err) reject(false);
           resolve(true);
-        }
+        },
       );
     });
   }

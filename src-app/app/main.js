@@ -7,7 +7,7 @@ export class App {
 
     let counter = Counter.get();
 
-    const render = () => (counterElement.innerHTML = `Coins ${counter}`);
+    const render = () => (counterElement.innerHTML = `${counter}`);
     render();
 
     clickedElement.addEventListener("click", (evt) => {

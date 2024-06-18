@@ -1,0 +1,14 @@
+.clicked {
+  display: flex;
+
+  user-select: none;
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+
+  width: calc(800px / 2.5);
+  height: calc(800px / 2.5);
+
+  margin: 0 auto;
+
+  border-radius: 50%;
+}

@@ -1,6 +1,6 @@
 export class Counter {
-  static set(counter) {
-    localStorage.setItem("counter", counter);
+  static set(newCounter) {
+    localStorage.setItem("counter", newCounter);
   }
 
   static get() {
