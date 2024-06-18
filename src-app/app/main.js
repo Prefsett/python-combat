@@ -9,10 +9,7 @@ export class App {
 
     this.#render();
 
-    clickedElement.addEventListener('touchend', (event) => {
-      event.preventDefault();
-      App.#click;
-    });
+    clickedElement.addEventListener('touchend', App.#click);
   }
 
   static #render() {
@@ -20,7 +17,8 @@ export class App {
     counterElement.innerHTML = `${App.#counter}`;
   }
 
-  static #click(evt) {
+  static #click(event) {
+    event.preventDefault();
     App.#counter += App.#incrNum;
     Counter.set(App.#counter);
     App.#render();
