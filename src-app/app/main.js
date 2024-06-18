@@ -9,7 +9,7 @@ export class App {
 
     this.#render();
 
-    clickedElement.addEventListener('touchstart', App.#click);
+    clickedElement.addEventListener('click', App.#click);
   }
 
   static #render() {
