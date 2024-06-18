@@ -9,12 +9,11 @@ export class App {
 
     this.#render();
 
-    clickedElement.addEventListener('touchend', App.#click);
-  }
-
-  static #render() {
-    const counterElement = document.getElementById('result');
-    counterElement.innerHTML = `${App.#counter}`;
+    if ('ontouchstart' in window) {
+      clickedElement.addEventListener('touchstart', App.#click);
+    } else {
+      clickedElement.addEventListener('click', App.#click);
+    }
   }
 
   static #click(event) {
@@ -22,5 +21,10 @@ export class App {
     App.#counter += App.#incrNum;
     Counter.set(App.#counter);
     App.#render();
+  }
+
+  static #render() {
+    const counterElement = document.getElementById('result');
+    counterElement.innerHTML = `${App.#counter}`;
   }
 }
