@@ -17,17 +17,23 @@
   <body>
     <main class="main">
       <div class="main__inner">
-        <img
-          src="./public/python_icon.svg"
-          id="clicked"
-          class="clicked python"
-        />
+        <img src="./public/python_icon.svg" id="clicked" class="clicked" />
         <div class="result-container">
           <img
             src="./public/python_icon.svg"
             class="result-container__coin-logo"
           />
           <h1 id="result" class="result-container__result"></h1>
+        </div>
+
+        <div class="upgrade-container">
+          <div class="upgrade-container__inner">
+            <button id="upgrade" class="upgrade">Upgrade</button>
+            <div class="upgrade__info">
+              <span id="level" class="upgrade__level"></span>
+              <span id="coins" class="upgrade__coins"></span>
+            </div>
+          </div>
         </div>
       </div>
     </main>

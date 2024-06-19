@@ -1,0 +1,17 @@
+.upgrade-container {
+  display: flex;
+
+  width: 200px;
+  height: 125px;
+
+  margin: 25px auto;
+
+  > .upgrade-container__inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+  }
+}

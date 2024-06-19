@@ -1,0 +1,13 @@
+.upgrade__info {
+  display: flex;
+
+  margin: 5px auto 0 auto;
+
+  > span {
+    display: flex;
+
+    margin: 0 4px;
+
+    color: #eeeeee;
+  }
+}

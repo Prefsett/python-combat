@@ -22,7 +22,7 @@ bot.api.setMyCommands([
 bot.command('start', async (ctx) => {
   console.log(ctx.from);
 
-  const massage = `Hi, @${ctx.from.username}! It is Python Combat - new crypto-project!\u{1F31F} Revolutionary cryptocurrency - Python coin right in your phone.\u{1F4F1}  \n\nStart mining Python coin right now and become a crypto millionaire!\u{1F680} \n\nRemember: Python coin is it future!!!\u{1F331}`;
+  const massage = `Hi, @${ctx.from.username}! It is Python Combat - new crypto-project!\u{1F31F} Revolutionary cryptocurrency - Python coin right in your phone.\u{1F4F1}  \n\nStart mining Python coin right now and become a crypto millionaire!\u{1F680} \n\nRemember: Python coin is future!!!\u{1F331}`;
   const replyObj = {
     reply_markup: {
       inline_keyboard: [[{ text: 'Launch Python Combat', url: botApp }]],
